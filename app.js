@@ -5,14 +5,18 @@ document.addEventListener("DOMConentLoaded", () => {
   const StartBtn = document.querySelector("#start-but")
   const width = 10;
 
-  console.log(squares);
+  // console.log(squares);
+  
+  // The Tetrominoes
+  const lTetromino = [
+    [1, width + 1, width * 2 + 1, 2],
+    [width, width + 1, width + 2, width * 2 + 2],
+    [1, width + 1, width * 2 + 1, width * 2],
+    [width, width*2, width*2+1, width*2+2]
+  ]
+
 });
 
 
 // console.log(squares) did not work for me. Why?
 
-// let names = ['Rodrigo', 'Sweeney', 'Sookie']
-
-// names.forEach(name => {
-//   console.log(name + ' is the best!')
-// })
