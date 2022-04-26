@@ -64,7 +64,11 @@ document.addEventListener("DOMConentLoaded", () => {
     })
   }
 
-
+  function moveDown() {
+    undraw()
+    currentPosition += width
+    draw()
+}
 
 
 
