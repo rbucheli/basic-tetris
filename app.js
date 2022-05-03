@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let squares = Array.from(document.querySelectorAll('.grid div'))
   const ScoreDisplay = document.querySelector('#score')
   const StartBtn = document.querySelector('#start-button')
-  const width = 10
+  const width = 10 
 
 
   // The Tetrominoes
@@ -14,5 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     [width, width*2, width*2+1, width*2+2]
   ]
   
+  const tTetronimo = [
+    [1, width, width + 1, width + 2],
+    [1, width + 1, width + 2, width * 2 + 1],
+    [width, width + 1, width + 2, width * 2 + 1],
+    [1, width, width + 1, width * 2 + 1]
+  ]
+
 
 });
