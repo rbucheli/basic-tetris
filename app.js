@@ -7,47 +7,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // The Tetrominoes
-  const ltetronimo = [
+  const lTetromino = [
     [1, width + 1, width * 2 + 1, 2], 
     [width, width + 1, width + 2, width * 2 + 2],
     [1, width + 1, width * 2 + 1, width * 2],
     [width, width*2, width*2+1, width*2+2]
   ]
   
-  const zTetronimo = [
+  const zTetromino = [
     [0, width, width + 1, width * 2 + 1],
     [width + 1, width + 2, width * 2, width * 2 + 1],
     [0, width, width + 1, width * 2 + 1],
     [width + 1, width + 2, width * 2, width * 2 + 1]
   ]
 
-  const tTetronimo = [
+  const tTetromino = [
     [1, width, width + 1, width + 2],
     [1, width + 1, width + 2, width * 2 + 1],
     [width, width + 1, width + 2, width * 2 + 1],
     [1, width, width + 1, width * 2 + 1]
   ]
 
-  const oTetronimo = [
+  const oTetromino = [
     [0, 1, width, width + 1],
     [0, 1, width, width + 1],
     [0, 1, width, width + 1],
     [0, 1, width, width + 1]
   ]
 
-  const iTetronimo = [
+  const iTetromino = [
     [1, width + 1, width * 2 + 1, width * 3 + 1],
     [width, width + 1, width + 2, width + 3],
     [1, width + 1, width * 2 + 1, width * 3 + 1],
     [width, width + 1, width + 2, width + 3]
   ]
 
-  const theTetronimoes = [
-    ltetronimo, zTetronimo, tTetronimo, oTetronimo, iTetronimo
+  const theTetrominoes = [
+    lTetromino, zTetromino, tTetromino, oTetromino, iTetromino
   ]
 
+  //
+
   let currentPosition = 4
-  let current = theTetronimoes[0][0]
+  let current = theTetrominoes[0][0]
   
   // Draw the first rotation in the first tetronimo
   function draw() {
