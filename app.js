@@ -42,4 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
     [width, width + 1, width + 2, width + 3]
   ]
 
+  const theTetronimoes = [
+    ltetronimo, zTetronimo, tTetronimo, oTetronimo, iTetronimo
+  ]
+
+  let currentPosition = 4
+  let current = theTetronimoes[0][0]
+  
+  // Draw the first rotation in the first tetronimo
+  function draw() {
+    current.forEach(index => {
+      squares[currentPosition + index].classList.add('tetromino')
+    })
+}
+
+  draw()
+
+
 });
