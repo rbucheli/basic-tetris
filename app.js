@@ -77,4 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
     draw()
   }
 
+  // freeze function
+  function freez() {
+    if (current.some(index => squares[currentPosition + index + width].classList.contains('taken'))) {
+      current.forEach(index => squares[currentPosition + index].classList.add('taken'))
+      // start a new tetromino falling
+      random = Math.floor(Math.random() * theTetrominoes.length)
+    }
+  }
+
 });
