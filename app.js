@@ -70,6 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // make the tetromino move down every second
   timerId = setInterval(moveDown, 1000)
 
+  // assign functions to keyCodes
+  function control(e) {
+    if (e.keyCode === 37) {
+      moveLeft()
+    }
+  }
+  document.addEventListener('keyup', control)
+
   // move down function 
   function moveDown() {
     undraw()
@@ -90,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-// move the tetromino left, unless it is at the edge or there is a blockage
+// move the tetromino left, unless it is at the edge or there is blockage
   function moveLeft() {
     undraw()
     const atLeftEdge = current.some(index => (currentPosition + index) % width === 0)
