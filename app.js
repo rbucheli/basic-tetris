@@ -166,7 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
     displaySquares.forEach(square => {
       square.classList.remove('tetromino')
     })
-    nextTetrominoes[nextRandom].forEach
+    nextTetrominoes[nextRandom].forEach(index => {
+      displaySquares[displayIndex + index].classList.add('tetromino')
+    })
   }
 
 
